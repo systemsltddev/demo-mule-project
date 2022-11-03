@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="890a711c-3d10-4518-bc12-325bfca8170f" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="test3Flow" doc:id="8c0f7950-1afc-4b1a-ab01-a1646ca463b2" >
+		<http:listener doc:name="Listener" doc:id="3f6aef25-be38-4b33-a7dc-3e7a41db6c70" config-ref="HTTP_Listener_config" path="/test3"/>
+		<set-variable value="1" doc:name="Set Variable" doc:id="b9ec5c09-1705-410e-8d24-4b455ff956d0" variableName="sdfa"/>
+	</flow>
+</mule>
